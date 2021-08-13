@@ -20,4 +20,11 @@ class FrontController extends Controller
         $produks = Produk::orderBy('created_at','desc')->get();
         return view('frontend.produk',compact(['produks']));
     }
+
+    public function singleProduk($id)
+    {
+        $produk = Produk::find($id);
+        $produks = Produk::inRandomOrder()->paginate(5);
+        return view('frontend.singleProduk',compact(['produk','produks']));
+    }
 }

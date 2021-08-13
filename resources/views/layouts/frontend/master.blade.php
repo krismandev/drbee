@@ -38,7 +38,7 @@
 	<header class="header-section">
 		<div class="container">
 			<!-- logo -->
-			<a href="index.html" class="site-logo"><img src="{{asset('frontend/img/logo.png')}}" alt=""></a>
+			<a href="{{route('index')}}" class="site-logo"><img src="{{asset('frontend/img/logo_drbee.jpeg')}}" alt="" style="width:95px; height: 95px;"></a>
 			<div class="nav-switch">
 				<i class="fa fa-bars"></i>
 			</div>
@@ -49,7 +49,7 @@
 				</div>
 				<div class="hf-item">
 					<i class="fa fa-map-marker"></i>
-					<p><span>Alamat:</span>Jln. Jambi-Sumatera xxxxxx</p>
+					<p><span>Alamat:</span>Danau Lamo, Kec. Maro Sebo, Kab. Muaro Jambi</p>
 				</div>
 			</div>
 		</div>
@@ -60,17 +60,13 @@
 	<!-- Header section  -->
 	<nav class="nav-section">
 		<div class="container">
-			<div class="nav-right">
+			{{-- <div class="nav-right">
 				<a href=""><i class="fa fa-search"></i></a>
 				<a href=""><i class="fa fa-shopping-cart"></i></a>
-			</div>
+			</div> --}}
 			<ul class="main-menu">
-				<li class="active"><a href="{{route('index')}}">Home</a></li>
-				<li><a href="{{route('produk')}}">Produk</a></li>
-				{{-- <li><a href="#">Event</a></li>
-				<li><a href="course.html">COURSES</a></li>
-				<li><a href="blog.html">blog</a></li>
-				<li><a href="contact.html">Contact</a></li> --}}
+				<li class="{{(request()->is('/')) ? 'active' : ''}}"><a href="{{route('index')}}">Home</a></li>
+				<li class="{{(request()->is('produk*')) ? 'active' : ''}}"><a href="{{route('produk')}}">Produk</a></li>
 			</ul>
 		</div>
 	</nav>

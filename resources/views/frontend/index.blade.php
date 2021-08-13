@@ -85,7 +85,9 @@
             @foreach ($produks as $produk)
             <div class="col-lg-4 col-md-6 course-item">
                 <div class="course-thumb">
-                    <img src="{{url('images/'.$produk->gambar)}}" alt="" style="width: 360px; height: 243px; object-fit: cover; object-position: center;">
+                    <a href="{{route('singleProduk',$produk->id)}}">
+                        <img src="{{url('images/'.$produk->gambar)}}" alt="" style="width: 360px; height: 243px; object-fit: cover; object-position: center;">
+                    </a>
                     <div class="course-cat">
                         <a href="https://wa.me/6282281164684" target="_blank">
                             <span>Beli Sekarang</span>
@@ -94,7 +96,7 @@
                 </div>
                 <div class="course-info">
                     {{-- <div class="date"><i class="fa fa-clock-o"></i> 22 Mar 2018</div> --}}
-                    <h4>{{$produk->nama}}</h4>
+                    <h4><a href="{{route('singleProduk',$produk->id)}}" style="color:black;">{{$produk->nama}}</a></h4>
                     <h4 class="cource-price">Rp. {{$produk->harga}}</h4>
                 </div>
             </div>
@@ -155,7 +157,8 @@
 
 <section class="contact-page spad pt-0 mt-5">
     <div class="container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7976.5048941436435!2d103.50771761169392!3d-1.6052902965348337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e0!4m0!4m0!5e0!3m2!1sid!2sid!4v1628438532991!5m2!1sid!2sid" width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.518670286532!2d103.64065831394738!3d-1.4624669989334276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e25f32e6a90a64b%3A0xd8ec76707aa051aa!2sDanau%20lamo!5e0!3m2!1sid!2sid!4v1628834204701!5m2!1sid!2sid" width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7976.5048941436435!2d103.50771761169392!3d-1.6052902965348337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e0!4m0!4m0!5e0!3m2!1sid!2sid!4v1628438532991!5m2!1sid!2sid" width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> --}}
     </div>
 </section>
 

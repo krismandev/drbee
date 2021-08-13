@@ -13,7 +13,9 @@
             @foreach ($produks as $produk)
             <div class="col-lg-4 col-md-6 course-item">
                 <div class="course-thumb">
-                    <img src="{{url('images/'.$produk->gambar)}}" alt="" style="width: 360px; height: 243px; object-fit: cover; object-position: center;">
+                    <a href="{{route('singleProduk',$produk->id)}}">
+                        <img src="{{url('images/'.$produk->gambar)}}" alt="" style="width: 360px; height: 243px; object-fit: cover; object-position: center;">
+                    </a>
                     <div class="course-cat">
                         <a href="https://wa.me/6282281164684" target="_blank">
                             <span>Beli Sekarang</span>
@@ -22,16 +24,16 @@
                 </div>
                 <div class="course-info">
                     {{-- <div class="date"><i class="fa fa-clock-o"></i> 22 Mar 2018</div> --}}
-                    <h4>{{$produk->nama}}</h4>
+                    <h4><a href="{{route('singleProduk',$produk->id)}}" style="color: black;">{{$produk->nama}}</a></h4>
                     <h4 class="cource-price">Rp. {{$produk->harga}}</h4>
                 </div>
             </div>
             @endforeach
             @endif
         </div>
-        <div class="text-center">
+        {{-- <div class="text-center">
             <a href="http://" class="site-btn">Lihat Semua</a>
-        </div>
+        </div> --}}
     </div>
 </section>
 @endsection
