@@ -67,10 +67,10 @@
 			<ul class="main-menu">
 				<li class="active"><a href="{{route('index')}}">Home</a></li>
 				<li><a href="{{route('produk')}}">Produk</a></li>
-				<li><a href="#">Event</a></li>
+				{{-- <li><a href="#">Event</a></li>
 				<li><a href="course.html">COURSES</a></li>
 				<li><a href="blog.html">blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="contact.html">Contact</a></li> --}}
 			</ul>
 		</div>
 	</nav>
