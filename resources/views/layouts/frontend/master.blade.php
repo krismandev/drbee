@@ -38,7 +38,7 @@
 	<header class="header-section">
 		<div class="container">
 			<!-- logo -->
-			<a href="{{route('index')}}" class="site-logo"><img src="{{asset('frontend/img/logo_drbee.jpeg')}}" alt="" style="width:95px; height: 95px;"></a>
+			<a href="{{route('index')}}"><img src="{{asset('frontend/img/drbee_logo.png')}}" alt="" style="width:95px; height: 95px;"></a>
 			<div class="nav-switch">
 				<i class="fa fa-bars"></i>
 			</div>
